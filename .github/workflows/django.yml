@@ -32,3 +32,18 @@ jobs:
       - name: Run tests with pytest
         run: |
           pytest reactDjangoV1/back/tests.py
+          
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install React dependencies
+        run: |
+          cd reactDjangoV1/frontend
+          npm install
+
+      - name: Run React tests with Jest
+        run: |
+          cd reactDjangoV1/frontend
+          npm test -- --watchAll=false --coverage
