@@ -1,4 +1,4 @@
-name: Django run 
+name: Django run
 
 on: [push, pull_request]
 
@@ -8,18 +8,27 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-  
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-  
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r reactDjangoV1/requirements.txt
           pip install pytest pytest-django
 
-      - name: Run tests
+      - name: Set up SQLite database
         run: |
-          pytest
+          # Créer la base de données SQLite
+          touch reactDjangoV1/db.sqlite3
+
+      - name: Run migrations
+        run: |
+          python reactDjangoV1/manage.py migrate
+
+      - name: Run tests with SQLite
+        run: |
+          pytest reactDjangoV1/
