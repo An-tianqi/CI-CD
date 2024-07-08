@@ -29,6 +29,6 @@ jobs:
         run: |
           python reactDjangoV1/manage.py migrate
 
-      - name: Run tests with SQLite
+      - name: Run tests with pytest
         run: |
           pytest reactDjangoV1/back/tests.py
