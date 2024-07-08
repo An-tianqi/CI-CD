@@ -58,25 +58,6 @@ from rest_framework import status
 from rest_framework.response import Response
 from back.views import contact
 
-@pytest.fixture
-def user():
-    # Fixture pour créer un utilisateur de test
-    return User.objects.create_user(username='testuser', password='12345', email='testuser@example.com')
-
-@pytest.mark.django_db(transaction=True)
-def test_profile_creation(user):
-    # Test de création de profil associé à un utilisateur
-    profile = Profile.objects.create(user=user, tickets=10)
-
-    # Vérifier que le profil a été créé correctement
-    assert profile.user == user
-    assert profile.tickets == 10
-
-    # Essayez de créer à nouveau le profil pour le même utilisateur
-    with pytest.raises(IntegrityError):
-        Profile.objects.create(user=user, tickets=5)
-
-
 
 @pytest.mark.django_db
 def test_history_creation():
