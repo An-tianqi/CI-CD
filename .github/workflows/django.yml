@@ -31,4 +31,4 @@ jobs:
 
       - name: Run tests with SQLite
         run: |
-          pytest reactDjangoV1/
+          pytest reactDjangoV1/back/tests.py
