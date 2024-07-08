@@ -1,0 +1,105 @@
+.login-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #1c1c1e;
+  color: #f5f5f7;
+}
+
+.login-left,
+.login-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-left {
+  background: linear-gradient(to bottom right, #ffa500, #ff8c00);
+  color: #1c1c1e;
+  text-align: center;
+}
+
+.login-left h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.login-left p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.learn-more-button {
+  background-color: #1c1c1e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.learn-more-button:hover {
+  background-color: #e6e6e6;
+}
+
+.login-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffa500;
+}
+
+.login-form {
+  background: #2c2c2e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #2c2c2e;
+  color: white;
+  font-size: 1rem;
+}
+
+.login-form input::placeholder {
+  color: #ccc;
+}
+
+.login-button {
+  background-color: #ffa500;
+  color: #1c1c1e;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-button:hover {
+  background-color: #ff8c00;
+}
+
+.signup-message {
+  margin-top: 20px;
+}
+
+.signup-message a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-message a:hover {
+  text-decoration: underline;
+}

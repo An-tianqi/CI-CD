@@ -1,0 +1,84 @@
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #1c1c1e;
+  color: #f5f5f7;
+  min-height: 100vh;
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.shop-header h1 {
+  font-size: 3rem;
+  color: #ffa500;
+  margin-bottom: 10px;
+}
+
+.shop-header p {
+  font-size: 1.2rem;
+  color: #f5f5f7;
+}
+
+.shop-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.shop-card {
+  background: #2c2c2e;
+  color: #f5f5f7;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.shop-card h2 {
+  font-size: 1.8rem;
+  color: #ffa500;
+  margin-bottom: 10px;
+}
+
+.shop-card p {
+  font-size: 1rem;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.shop-card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffa500;
+  margin-bottom: 20px;
+}
+
+.shop-card button {
+  background-color: #ffa500;
+  color: #1c1c1e;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-card button:hover {
+  background-color: #ff8c00;
+}

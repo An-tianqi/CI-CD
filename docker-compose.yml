@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./reactDjangoV1
+      dockerfile: Dockerfile
+    volumes:
+      - ./reactDjangoV1:/reactDjangoApp
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1  # Activer le mode debug pour Django, si nécessaire
+
+  frontend:
+    build:
+      context: ./reactDjangoV1/frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./reactDjangoV1/frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend

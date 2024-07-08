@@ -1,0 +1,9 @@
+Django
+requests
+undetected-chromedriver==2.0.0
+django-cors-headers
+djangorestframework
+stripe
+blinker==1.7.0
+selenium-wire
+beautifulsoup4
